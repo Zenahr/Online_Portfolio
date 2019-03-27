@@ -1,17 +1,17 @@
-@import "config";
-@import "menu";
+@import 'config';
+@import 'menu';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background();
+  @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -21,19 +21,20 @@ h2,
 h3 {
   margin: 0;
   font-weight: 400;
+
   &.lg-heading {
-    font-size: 3rem; // pixel-size multiplier
+    font-size: 6rem;
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5); // cool method
+    background: rgba(lighten($primary-color, 2), 0.5);
   }
 }
 
 a {
-  color: #ffff;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -49,26 +50,26 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
-  min-height: calc(100vh - 60px); //60px is currently the height of the footer.
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
 
     a {
       padding: 0.4rem;
+      @include easeOut;
 
       &:hover {
         color: $secondary-color;
-        @include easeOut(); //calls the effect defined at the top.
       }
     }
   }
 
   &#home {
-    overflow: hidden; //hides scrollbars
+    overflow: hidden;
     h1 {
-      margin-top: 20vh; //vw gibt's auch
+      margin-top: 20vh;
     }
   }
 }
@@ -77,9 +78,9 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: 1fr 1fr 1fr; //could also: repeat(3, 1fr);
+    'bioimage bio bio'
+    'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
@@ -112,14 +113,14 @@ main {
   }
 }
 
-// Projects Site
+// Work/Projects
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {
-    width: 100%; //sets the image sizes to the container
+    width: 100%;
     border: 3px #fff solid;
 
     &:hover {
@@ -132,17 +133,16 @@ main {
 
 // Contact Page
 .boxes {
-  display: flex; //try the same thing with boxes
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
 
   div {
-    //The blocks themselves
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1.5rem 2, 5rem;
+    padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     @include easeOut;
 
@@ -163,7 +163,7 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  &.hover {
+  &:hover {
     background: $secondary-color;
     color: set-text-color($secondary-color);
   }
@@ -172,20 +172,21 @@ main {
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
-  color: set-text-color($primary-color);
+  color: #fff;
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
-  color: set-text-color(lighten($primary-color, 50)); // Needs improvement.
+  color: #333;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darnek($primary-color 10);
+  background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
 }
-@import "mobile";
+
+@import 'mobile';
