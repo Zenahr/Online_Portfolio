@@ -1,8 +1,12 @@
 $primary-color: #444;
-$secondary-color: #eece1a;
+$secondary-color: #5c0074;
+$hover-color: #31003d;
+$background-color: rgb(119, 119, 119);
+
 $show-home-image: true;
+
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.6;
 
 @mixin easeOut {
   transition: all 0.5s ease-out; // (what, how long, effect)
@@ -24,7 +28,7 @@ $background-opacity: 0.9;
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: rgba($primary-color, $background-opacity);
+        background: rgba($background-color, $background-opacity);
       }
     }
   }

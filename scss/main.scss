@@ -1,17 +1,26 @@
 @import "config";
 @import "menu";
 
+@font-face {
+  font-family: "EB Garamond";
+  src: url("../font/garamond.woff") format("woff"),
+    url("../font/garamond.woff2") format("woff2"),
+    url("../font/garamond.svg#filename") format("svg");
+}
+
+$fontSize: 350;
 * {
   box-sizing: border-box;
 }
 
 body {
   @include background();
-  background: $primary-color;
-  color: set-text-color($primary-color);
+  background: $background-color;
+  color: set-text-color($background-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "EB Garamond";
+  //font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -20,20 +29,21 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: $fontSize;
   &.lg-heading {
+    color: set-text-color($background-color);
     font-size: 3rem; // pixel-size multiplier
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5); // cool method
+    background: rgba(lighten($background-color, 2), 0.5); // cool method
   }
 }
 
 a {
-  color: #ffff;
+  color: $secondary-color;
   text-decoration: none;
 }
 
@@ -59,7 +69,7 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: $secondary-color;
+        color: $hover-color;
         @include easeOut(); //calls the effect defined at the top.
       }
     }

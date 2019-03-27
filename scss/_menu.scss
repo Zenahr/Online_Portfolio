@@ -1,3 +1,4 @@
+$fontSize: 320; //Menu Text size
 // Menu Button
 .menu-btn {
   position: absolute;
@@ -124,7 +125,7 @@
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: $fontSize;
     color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
