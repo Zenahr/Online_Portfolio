@@ -1,9 +1,9 @@
 {
   "name": "portfolio_website",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio",
   "main": "index.js",
-  "homepage": "https://github.com/Zenahr/Zenahr.github.io",
+  "homepage": "https://Zenahr.github.io/Online_Portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
