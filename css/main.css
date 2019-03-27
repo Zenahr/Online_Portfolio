@@ -99,7 +99,7 @@
 
 body {
   background: #777777;
-  color: #000;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "EB Garamond";
@@ -126,14 +126,14 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    color: #000;
+    color: #fff;
     font-size: 3rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(124, 124, 124, 0.5); }
+    background: rgba(73, 73, 73, 0.5); }
 
 a {
   color: #5c0074;
