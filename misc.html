@@ -9,10 +9,15 @@
     crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/main.css">
-  <title>Welcome To My Portfolio</title>
+  <title>Miscellaneous Stuff</title>
+
+  <link rel="stylesheet" href="https://rubenwardy.com/lichess_widgets/lichess_widgets.css" />
+<script src="https://rubenwardy.com/lichess_widgets/lichess_widgets.js"></script>
+<!-- For the light theme --> <link rel="stylesheet" href="https://rubenwardy.com/lichess_widgets/light.css" />
+<!-- For the dark theme --> <link rel="stylesheet" href="https://rubenwardy.com/lichess_widgets/dark.css" />
 </head>
 
-<body id="bg-img"> <!--This is not essential as I use &.after in the css file-->
+<!--- <body id="bg-img"> -->
    
 <header>
 <div class="menu-btn">
@@ -26,7 +31,7 @@
         <div class="portrait"></div>
     </div>
     <ul class="menu-nav">
-    <li class="nav-item current">
+    <li class="nav-item">
     <a href="index.html" class="nav-link">
      Home</a>
     </li>
@@ -45,12 +50,12 @@
      class="nav-link">
      Contact</a>
     </li>
-     <li class="nav-item">
+    <li class="nav-item">
     <a href="aboutSite.html"
      class="nav-link">
      About this Site</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item current">
     <a href="misc.html"
      class="nav-link">
      Miscellaneous Stuff</a>
@@ -59,33 +64,23 @@
 </nav>
 </header>
 
-<main id="home">
+<!--MAIN CONTENT-->
+<main id="misc">
     <h1 class="lg-heading">
-        Zenahr <span class="text-secondary"> Barzani</span>
-    </h1>
-    <h2 class"sm-heading">
-        Developer, Musician & Artist
+        In case <span class="text-secondary">boredom </span> got to you...</h1>
+        <div class="#">
+        <h2 class"sm-heading">
+       Here is a<span class="text-secondary"> chess puzzle</span> for You!
     </h2>
-    <div class="icons">
-    <a href="https://www.xing.com/profile/Zenahr_Barzani">
-       <i class="fab fa-xing fa-2x"></i> 
-    </a>
-    <a href="https://www.instagram.com/fuyukineko">
-       <i class="fab fa-instagram fa-2x"></i> 
-    </a>
-    <a href="https://github.com/Zenahr">
-       <i class="fab fa-github fa-2x"></i> 
-    </a>
-    <a href="https://soundcloud.com/muted-music-ensemble">
-       <i class="fab fa-soundcloud fa-2x"></i> 
-    </a>
-    </div>
+        <script src="https://lichess.org/training/embed?theme=auto&bg=auto"></script>
+        </div>
+    
+    <script>lichess_widgets.profile_big("light", "Fuyukine", "My Current Lichess Stats");</script> 
 </main>
 
 <footer id="main-footer">
 Copyright &copy; 2019
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 
